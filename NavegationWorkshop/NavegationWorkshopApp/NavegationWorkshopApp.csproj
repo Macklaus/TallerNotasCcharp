@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ADE5F78-7DB2-4A0B-B828-710307DC4BF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NavegationWorkshopApp</RootNamespace>
+    <AssemblyName>NavegationWorkshopApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassPercentage.cs" />
+    <Compile Include="ClassSubject.cs" />
+    <Compile Include="ClassUser.cs" />
+    <Compile Include="ControllerMenuNotesForm.cs" />
+    <Compile Include="ControllerUser.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateUser.Designer.cs">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuNotes.Designer.cs">
+      <DependentUpon>FormMenuNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewSubject.Designer.cs">
+      <DependentUpon>FormNewSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetPercentage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetPercentage.Designer.cs">
+      <DependentUpon>FormSetPercentage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuNotes.resx">
+      <DependentUpon>FormMenuNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewSubject.resx">
+      <DependentUpon>FormNewSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetPercentage.resx">
+      <DependentUpon>FormSetPercentage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
